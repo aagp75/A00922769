@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hangman</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="../scripts/hangman.js" defer="defer"></script>
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <a href=""><img src="../images/js.png" alt="Site Logo" id="fixed-width"></a>
+            <h1>Hangman - GIS Edition!</h1>
+        </header>     
+
+        <nav>
+            <ul>
+                <li><a href="" id="current-page"><br><br></a></li>
+            </ul> 
+        </nav>
+
+        <main>
+
+            <section>
+                <article class="container">
+                    <div class="box" id="game">
+                        <!-- Hangman image (6+ stages) -->
+                        <div id="stage-wrap">
+                            <img id="hangman-img" src="../images/hangman-0.jpg" alt="Hangman stage 0">
+                        </div>
+                    </div>
+
+                    <div class="box" id="game">
+                        <!-- Hint -->
+                        <div id="hint-wrap" class="important">
+							<br><br>
+                            <strong>Hint:</strong> <span id="hint">…</span>
+                            <p>Guess one letter at a time.  You have 6 incorrect guesses</p>
+                        </div>
+                        
+                        <br><br>
+
+                        <!-- Word slots -->
+                        <div id="word-wrap">
+                            <!-- underscores / revealed letters -->
+                        </div>
+
+                        <br><br>
+                        
+                        <!-- Input and onscreen keyboard -->
+                        <form id="guess-form" autocomplete="off">
+                            <label for="letter">Enter a letter:</label>
+                            <input id="letter">
+                            <input type="submit" value="Guess">
+                        </form>
+                        
+                        <br><br>
+
+                        <div id="keyboard">
+                            <!-- A–Z buttons inserted -->
+                        </div>
+                        
+                        <!-- Status + controls -->
+                        <div id="status"></div>
+                        <div>
+                            <button id="play-again" hidden>Play Again</button>
+                        </div>                        
+                    </div>
+
+                </article>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>COMP2132</p>        
+        </footer>        
+
+    </div>
+</body>
