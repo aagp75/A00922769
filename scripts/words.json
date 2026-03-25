@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "word": "ADDRESS GEOCODING",
+      "hint": "The process of converting street addresses or other location information to spatial data (points on a map)."
+    },
+    {
+      "word": "BOOLEAN EXPRESSION",
+      "hint": "An expression that results in a true or false (logical) condition. For example, in the Boolean expression 'height > 70 AND diameter = 100', all locations where the height is greater than 70 and the diameter is equal to 100 would be given a value of 1, or true, and all locations where this criterion is not met would be given a value of 0, or false. Named for the English mathematician George Boole (1815–1864)."
+    },
+    {
+      "word": "CARTOGRAPHER",
+      "hint": "One who practices the art and science of expressing graphically, usually through maps, the natural and cultural features of the earth."
+    },
+    {
+      "word": "DASHBOARD",
+      "hint": "[visualization techniques, Esri software] A dynamic view of geographic information and supporting data used to monitor events, make decisions, and see trends."
+    },
+    {
+      "word": "ENTERPRISE GIS",
+      "hint": "A geographic information system that is integrated through an entire organization so that a large number of users can manage, share, and use spatial data and related information to address a variety of needs, including data creation, modification, visualization, analysis, and dissemination."
+    },
+    {
+      "word": "FEATURE CLASS",
+      "hint": "A collection of geographic features with the same geometry type (such as point, line, or polygon), the same attributes, and the same spatial reference. Feature classes can be used to group homogeneous features into a single unit for storage purposes. For example, highways, primary roads, and secondary roads can be grouped into a line feature class named roads. In a geodatabase, feature classes can also store annotation and dimensions."
+    },
+    {
+      "word": "GEODATABASE",
+      "hint": "A data storage and file management format specifically used with geospatial data. Often abbreviated to FileGDB or FGDB and stored with the file extension .gdb."
+    },
+    {
+      "word": "HEX CODE",
+      "hint": "A color model that uses a hexadecimal palette."
+    },
+    {
+      "word": "IMPEDANCE",
+      "hint": "A measure of the amount of resistance, or cost, required to traverse a path in a network, or to move from one element in the network to another. Resistance may be a measure of travel distance, time, speed of travel multiplied by distance, and so on. Higher impedance values indicate more resistance to movement, and a value of zero indicates no resistance. An optimum path in a network is the path of lowest impedance, also called the least-cost path."
+    },
+    {
+      "word": "JAVASCRIPT OBJECT NOTATION",
+      "hint": "Also known by the abbreviation JSON. An open-standard file and data interchange format used for encoding a variety of geographic data structures."
+    },
+    {
+      "word": "KRIGING",
+      "hint": "A spatial interpolation technique used to estimate values at unmeasured locations based on known values at nearby locations. Known values are given weights based on the distance between the measured points, the prediction locations, the overall spatial arrangement among the measured points, and the correlation between data values given their distance apart. Kriging is unique among interpolation methods in that it provides a method for characterizing the variance, or precision, of the predictions. Kriging is based on regionalized variable theory, which assumes that spatial variation in the data being modeled is homogeneous across the surface (that is, the same pattern of variation can be observed at all locations on the surface). Named for South African mining engineer Danie G. Krige (1919–2013)."
+    },
+    {
+      "word": "LABEL OFFSET",
+      "hint": "The distance a label should be from the feature it labels on the map."
+    },
+    {
+      "word": "MANY TO MANY RELATIONSHIP",
+      "hint": "An association between two linked or joined tables in which one record in the first table may correspond to many records in the second table, and vice versa."
+    },
+    {
+      "word": "NAD83",
+      "hint": "The horizontal datum and spatial reference system for geometric positioning used in Canada, Greenland, and the United States. Uses the Geodetic Reference System 1980 (GRS80) ellipsoid as a reference surface and the Bureau International de l’Heure Terrestrial System of 1984 (BTS-84) for orientation."
+    },
+    {
+      "word": "OPEN GEOSPATIAL CONSORTIUM",
+      "hint": "Also known by the abbreviation OGC. An international consortium of companies, government agencies, and universities participating in a consensus process to develop publicly available geospatial and location-based services. Interfaces and protocols defined by OpenGIS specifications support interoperability and seek to integrate geospatial technologies with wireless and location-based services."
+    },
+    {
+      "word": "PARCEL MAP",
+      "hint": "A geographic record of land ownership at the local level. Used as a reference for surveying, tax assessment, and other municipal concerns."
+    },
+    {
+      "word": "QUANTITATIVE GEOGRAPHY",
+      "hint": "The application of mathematical and statistical concepts and methods to the study of geography."
+    },
+    {
+      "word": "RASTER",
+      "hint": "A fundamental data structure consisting of a matrix of equally sized cells, or pixels, arranged in rows and columns, and composed of single or multiple bands. Each cell represents a location on the earth's surface and contains a numeric value that represents a particular attribute or phenomenon, such as temperature at a particular height or depth, elevation, or image brightness value. Groups of cells that share the same cell value represent the same geographic feature."
+    },
+    {
+      "word": "SDK",
+      "hint": "An abbreviation of software development kit. A set of code libraries and related tools used to develop platform-specific applications."
+    },
+    {
+      "word": "TOPOLOGY",
+      "hint": "In geodatabases, the arrangement that constrains how point, line, and polygon features share geometry. For example, street centerlines and census blocks share geometry, and adjacent soil polygons share geometry. Geodatabase topology defines and enforces data integrity rules (for example, there should be no gaps between polygons), and topological relationship queries, navigation, editing, and feature construction."
+    },
+    {
+      "word": "UTM",
+      "hint": "A projected coordinate system that extends around the world, from 84° N to 80° S. The UTM system has 60 north–south zones, each 6 degrees in longitude."
+    },
+    {
+      "word": "VIEWSHED",
+      "hint": "The field of view from a given vantage point. Viewshed maps are useful for applications such as finding well-exposed places for communication towers."
+    },
+    {
+      "word": "WEB MAP SERVICE",
+      "hint": "Also known by the abbreviation WMS. An open specification standard that defines the protocol for how map images are rendered by servers to web clients. The WMS standard is the result of a collaborative effort assembled by the Open Geospatial Consortium (OGC) to provide reliable geospatial data."
+    },
+    {
+      "word": "XY COORDINATES",
+      "hint": "A pair of numerical values (x, y) representing horizontal and vertical positions in a plane, commonly used to describe the location of features in projected coordinate systems."
+    },
+    {
+      "word": "ZONAL STATISTICS",
+      "hint": "The calculation of a statistic for each zone of a zone dataset based on values from another dataset, a value raster. A single output value is computed for each cell in each zone defined by the input zone dataset."
+    }
+  ]
+}
