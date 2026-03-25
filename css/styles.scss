@@ -1,0 +1,427 @@
+/*
+---------------------------
+Box Model Resets
+---------------------------
+*/
+/* ensure all page elements use box-sizing:border-box; */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*remove gaps at edge of viewport*/
+body{    
+    margin:0px;
+}
+
+@import url(normalize.css);
+
+html{
+	font-family: "Montserrat", sans-serif;
+	font-style: normal; 
+}
+
+body{
+    background-color: #B0AAAA;
+    margin: 1px;
+}
+
+
+img{
+	max-width: 100%;
+	height:auto;
+}
+
+header{
+    padding: 20px 0px;
+    background-color: #B0AAAA;
+    display: flex;
+    align-self: stretch;
+}
+
+footer{
+    background-color: #B0AAAA;
+    padding: 20px;
+    align-self: stretch;
+}
+
+main{
+    padding: 1px;
+    flex: 1; /* sticky footer */
+    display: block;
+    width: 100%;
+}
+
+div > p{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* h2{
+    color: #F9F8F8;
+} */
+
+section{
+    padding: 2px;
+}
+
+article{
+    padding: 2px 10px;
+    /* background-color: #736560; */
+    margin:5px;
+    color: #F9F8F8;
+}
+
+ul{
+    list-style-type: square;
+}
+
+ol{
+    list-style-type:upper-roman;
+}
+
+nav{
+	display: block;
+    width: 100%;
+}
+
+nav ul{
+    list-style-type: none;
+    list-style-image: none;
+	overflow: hidden;
+	background-color: #B6866D;
+	color: white;
+    font-weight: bold;
+    margin:2px;
+    padding:2px;
+	display:flex;
+}
+
+nav a{
+    background-color: #B6866D; 
+    color:white;
+    font-weight: bold;
+	text-decoration:none;
+    margin: 2px 2px;
+    padding: 5px 15px;
+    display:inline-block;
+    text-align:center;
+    line-height:30px;
+}
+
+nav a:hover{
+    background-color: #736560;
+    color: #EBD183;
+}
+
+/* Hyperlink Styling */
+a{
+    color:#B6866D;
+    font-weight:normal;
+    text-decoration: none;
+}
+/*a:hover and a:focus effects*/
+a:hover, a:focus{
+    color:#EBD183;
+    font-weight:bold;
+    /*remove the link underline when user interacts*/
+    text-decoration:none;
+}
+a:active{
+    /*add underline if/when user clicks or taps*/
+    text-decoration:underline;
+}
+
+table, th{
+    background-color:#F9F8F8;
+}
+
+table, td{
+    background-color: #EBD183;
+}
+
+table, th, td{
+    background-color: #B6866D;
+    padding: 8px;
+    text-align: right;
+}
+
+th{
+    background-color: #EBD183;
+    color: white;
+}
+
+tr, td{
+    background-color: #B6866D;
+    color: black;
+}
+
+th{
+    background-color: #EBD183;
+    color: white;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) td {
+    background-color: white; 
+}
+
+tr:nth-child(odd) td {
+    background-color: #F9F8F8; 
+}
+
+/* Flexbox */
+.container {
+  display:flex;
+  /* 	flex-wrap defines how items will wrap. */
+  flex-wrap: wrap;  
+  
+  /* 	flex-direction determines which direction items should be displayed */
+  flex-direction:row;  
+
+  /* spread items evenly */
+  justify-content: flex-start;
+}
+/* each item in the flex box... */
+.box {
+	/* https://www.w3schools.com/csS/css3_flexbox_items.asp */
+	/* grow equally to fill available space, shrink as needed, evenly divide the container regardless of content */ 
+	/* flex: 1 1 0; */
+    background-color: #736560;
+    margin: 5px;
+    padding: 15px;
+}
+
+
+/*
+button{
+    border-radius: 5px;
+    background-color: #B6866D;
+    color: #EBD183;
+    font-weight: bold;
+    padding: 5px;
+} */
+
+/* Button styling written as scss mixin - "include the use of at least one SASS mixin" in assignment PDF */
+
+@mixin button($radius, $bg, $colour, $font, $padding){
+    border-radius: $radius;
+    background-color: $bg;
+    color: #EBD183;
+    font-weight: $font;
+    padding: $padding;
+}
+
+button{
+    @include button(5px, #B6866D, #EBD183, bold, 5px)
+}
+
+/* fade-in mixin for JavaScript trigger animation */
+@mixin fade-in($opacity, $animation){
+    opacity: $opacity;
+    animation: $animation;
+}
+
+.fade-in{
+    @include fade-in(0, fadeIn 1s ease-in forwards)
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* basic form styles */
+form {
+    border: 1px solid #EBD183;
+    padding: 10px;            
+    background: #B6866D;
+    box-shadow: 0px 0px 0px 1px #736560, 
+                0px 0px 3px 3px #B6866D;
+    border-radius: 10px;
+    margin-bottom:15px;
+    color: #B6866D;
+    /* forms are block 100% width by default */
+    max-width:500px;
+    margin: auto;
+}
+
+
+input{
+    flex:0 0 75%;
+    margin-bottom:3px;
+    padding:5px;
+    border-radius:5px;
+    font-weight: bold;
+    /* width: 50%; */
+}
+input[type="submit"]{
+    flex:0 0 auto;
+    border-radius: 5px;
+    border:solid 2px;
+    font-weight:bold;
+    padding:10px;
+    cursor:pointer;
+    transition: transform .05s linear;
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.1);
+}
+
+select{
+    flex:0 0 auto;
+    border-radius: 5px;
+    border:solid 2px;
+    padding:10px;
+    cursor:pointer;  
+}
+
+.show{
+    flex:0 0 auto;
+    border:solid 2px;
+    font-weight:bold;
+    cursor:pointer;
+    background: #EBD183;
+    color: #736560;
+}
+
+.error{
+    border: 2px solid #EBD183;
+    background-color: #B0AAAA;
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-icon {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 6px;
+    background: #EBD183;
+    color: #736560;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    display: none;
+    position: absolute;
+    left: 105%;
+    top: 0;
+    background: #EBD183;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    width: 220px;
+    font-size: 0.8rem;
+    z-index: 1000;
+}
+
+
+.main-image{
+    width: 400px;
+}
+.thumbnails a.thumb {
+    display:inline-block; 
+    border:2px solid transparent; 
+    margin-right:6px;
+}
+.thumbnails a.thumb.is-active { 
+    border-color:#EBD183; 
+}
+.thumbnails img { 
+    width:84px; 
+    height:auto; 
+    /* pointer-events:none;  */
+    pointer-events:auto; 
+} 
+
+.important{/* outline and highlight important stuff */
+    padding: 16px;
+    background-color: #B6866D;
+    border-radius: 9px;
+    border:solid 1px black;;    
+    box-shadow: 0px 0px 0px 1px #736560, 
+                0px 0px 3px 3px #B6866D;
+    max-width:500px;
+    margin: auto;
+}
+.important:before{/* add '!Important' preamble */
+    content:"\2755 Important ";
+    font-weight: bold;
+    border:solid 2px #EBD183;
+    border-radius:5px;
+    background-color: rgb(255, 255, 255);
+    color:black;
+    padding:5px 2px 2px 2px;    
+    margin-right:4px;
+}
+
+/* ID Selectors     */
+#wrapper{
+	/*  this will center the page horizontally */
+	margin:auto;
+	padding: 5px 0;
+    align-items: flex-start;
+	/* sticky footer */
+	display: flex;
+	flex-direction: column;
+    max-width: 1400px;
+	min-height: 100vh; /* 100% as tall as the height of the viewport */
+    border: #EBD183 solid 4px;
+    background-color: #F9F8F8;
+    padding:10px;
+}
+
+/* Stretch header, nav, and footer to the width of the wrapper class */
+/* #wrapper > header,
+#wrapper > nav ul,
+#wrapper > footer {
+    align-self: stretch;
+} */
+
+/* indicate current page on nav menu */
+#current-page{
+    text-decoration: underline;
+    text-decoration-color: #EBD183;
+}
+
+
+/* fix the width of the header logo */
+#fixed-width{
+	width:50px;
+    margin: 20px;
+}
+
+
+@media (max-width: 335px){
+    header{
+        flex-wrap: wrap;
+        padding: 0px 0px 0px 20px;
+    }
+    nav ul{
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px){
+    header{
+        flex-wrap: wrap;
+        padding: 0px 0px 0px 20px;        
+    }
+}
+
+@media (min-width: 650px){
+    .box{
+        flex: 1 1 0;
+    }
+}
